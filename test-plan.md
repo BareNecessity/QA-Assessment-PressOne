@@ -1,12 +1,12 @@
 
-# 🧪 Test Plan for Todo.vue Component
+# Test Plan for Todo.vue Component
 
-## 🎯 Objective
+##  Objective
 Ensure the `Todo.vue` component behaves correctly under various user interactions using unit, integration, and E2E tests.
 
 ---
 
-## 🧩 Test Types
+## Test Types
 
 | Type          | Purpose                                                                 |
 |---------------|-------------------------------------------------------------------------|
@@ -16,7 +16,7 @@ Ensure the `Todo.vue` component behaves correctly under various user interaction
 
 ---
 
-## 🚨 Test Priorities
+## Test Priorities
 
 1. **Validation** – Preventing empty or duplicate entries.
 2. **Todo CRUD** – Adding and removing todo items.
@@ -26,7 +26,7 @@ Ensure the `Todo.vue` component behaves correctly under various user interaction
 
 ---
 
-## ✅ Test Cases
+## Test Cases
 
 ### 1. Add Valid Todo
 - **Preconditions:** App is running; input field is empty.

@@ -1,12 +1,12 @@
 
-### 🐞 Bug Analysis: Duplicate Todo Items
+### Bug Analysis: Duplicate Todo Items
 
 **Bug Source File:** `src/components/Todo.vue`  
 **Bug Description:** Rapidly adding the same todo using Enter results in duplicate entries due to ID collision.
 
 ---
 
-### 🔁 Steps to Reproduce
+### Steps to Reproduce
 1. Navigate to the Todo app.
 2. Type a task like "Buy groceries".
 3. Press the Enter key quickly multiple times within a second.
@@ -15,7 +15,7 @@
 
 ---
 
-### 🧠 Root Cause Hypothesis
+### Root Cause Hypothesis
 
 The bug stems from this line in `addTodo()`:
 
@@ -27,20 +27,16 @@ Since the ID is generated using the current Unix timestamp in seconds, pressing 
 
 ---
 
-### ✅ Suggested Fix
+### Suggested Fix
 
 Use a more reliable ID generator, such as:
-```js
-id: crypto.randomUUID()
-```
-Or:
 ```js
 id: Date.now() + Math.random()
 ```
 
 ---
 
-### 🛡️ Preventing Regression
+### Preventing Regression
 
 - Add a **unit test** to verify that every added todo gets a unique ID.
 - Add an **E2E test** to simulate rapid entries and confirm only unique entries persist.
